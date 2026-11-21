@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pembayaran | DapurTani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container py-5 halaman-bayar">
+        <a href="katalog.html" class="text-dark d-inline-block mb-3">← Kembali ke katalog</a>
+        <h2 class="mb-4">Pembayaran</h2>
+
+        <div class="row g-4">
+            <section class="col-lg-8">
+                <form id="paymentForm">
+                    <!-- Alamat Pengiriman -->
+                    <fieldset class="payment-card mb-3">
+                        <h5 class="mb-3">Alamat pengiriman</h5>
+                        <div class="row g-3">
+                            <p class="col-md-6 mb-0">
+                                <label for="nama" class="form-label">Nama penerima</label>
+                                <input type="text" id="nama" class="form-control" required>
+                            </p>
+                            <p class="col-md-6 mb-0">
+                                <label for="whatsapp" class="form-label">No. WhatsApp</label>
+                                <input type="tel" id="whatsapp" class="form-control" placeholder="081234567890" required>
+                            </p>
+                            <p class="col-12 mb-0">
+                                <label for="alamat" class="form-label">Alamat lengkap</label>
+                                <textarea id="alamat" class="form-control" rows="2" required></textarea>
+                            </p>
+                            <p class="col-md-6 mb-0">
+                                <label for="frekuensi" class="form-label">Frekuensi</label>
+                                <select id="frekuensi" class="form-select">
+                                    <option value="sekali">Sekali kirim</option>
+                                    <option value="mingguan">Setiap minggu</option>
+                                    <option value="dua-minggu">Setiap 2 minggu</option>
+                                </select>
+                            </p>
+                            <p class="col-md-6 mb-0">
+                                <label for="tanggal" class="form-label">Tanggal kirim pertama</label>
+                                <input type="date" id="tanggal" class="form-control" required>
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <!-- Metode Pembayaran -->
+                    <fieldset class="payment-card">
+                        <h5 class="mb-3">Metode pembayaran</h5>
+
+                        <p class="payment-label">Transfer bank</p>
+                        <div class="payment-options">
+                            <button type="button" class="payment-method" data-method="BCA">
+                                <img src="img/bca.png" alt="BCA">
+                            </button>
+                            <button type="button" class="payment-method" data-method="Mandiri">
+                                <img src="img/mandiri.png" alt="Mandiri">
+                            </button>
+                            <button type="button" class="payment-method" data-method="BNI">
+                                <img src="img/bni.png" alt="BNI">
+                            </button>
+                            <button type="button" class="payment-method" data-method="BRI">
+                                <img src="img/bri.png" alt="BRI">
+                            </button>
+                        </div>
+
+                        <p class="payment-label">E-wallet</p>
+                        <div class="payment-options">
+                            <button type="button" class="payment-method" data-method="GoPay">
+                                <img src="img/gopay.png" alt="GoPay">
+                            </button>
+                            <button type="button" class="payment-method" data-method="OVO">
+                                <img src="img/ovo.png" alt="OVO">
+                            </button>
+                            <button type="button" class="payment-method" data-method="DANA">
+                                <img src="img/dana.png" alt="DANA">
+                            </button>
+                            <button type="button" class="payment-method" data-method="ShopeePay">
+                                <img src="img/shopee.png" alt="ShopeePay">
+                            </button>
+                        </div>
+
+                        <p class="payment-label">QR Code</p>
+                        <button type="button" class="payment-method" data-method="QRIS">
+                            <img src="img/qris.png" alt="QRIS">
+                        </button>
+
+                        <p class="payment-label">Bayar di tempat</p>
+                        <button type="button" class="payment-method" data-method="COD">
+                            <i class="bi bi-cash-stack me-2"></i> COD
+                        </button>
+
+                        <!-- Detail Pembayaran -->
+                        <section id="paymentDetail" class="payment-detail d-none">
+                            <p class="mb-1">Metode pembayaran yang dipilih</p>
+                            <h5 id="paymentTitle"></h5>
+                            <hr>
+                            <p class="mb-1">Total pembayaran</p>
+                            <h4 id="paymentTotal">Rp0</h4>
+                            <small class="text-secondary">Pembayaran ini hanya simulasi.</small>
+                        </section>
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- Ringkasan Pesanan -->
+            <aside class="col-lg-4">
+                <section class="payment-summary bg-dark text-white">
+                    <h5 class="mb-4">Ringkasan pesanan</h5>
+
+                    <div id="checkoutItems">
+                        <p class="text-center">Belum ada produk dalam pesanan.</p>
+                    </div>
+                    <hr>
+                    <p class="d-flex justify-content-between">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">Rp0</span>
+                    </p>
+                    <p class="d-flex justify-content-between">
+                        <span>Biaya layanan 3%</span>
+                        <span id="checkoutFee">Rp0</span>
+                    </p>
+                    <p class="d-flex justify-content-between">
+                        <span>Ongkir (estimasi)</span>
+                        <span id="checkoutOngkir">Rp0</span>
+                    </p>
+                    <h5 class="d-flex justify-content-between mb-3">
+                        <span>Total</span>
+                        <span id="checkoutTotal">Rp0</span>
+                    </h5>
+                    <button type="submit" form="paymentForm" id="payButton" class="btn btn-danger rounded-pill w-100 mb-2" disabled>
+                        Konfirmasi pesanan
+                    </button>
+                    <a href="katalog.html" class="btn btn-outline-light rounded-pill w-100">Kembali ke katalog</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Pesanan Berhasil -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal">
+                <i class="bi bi-check-circle text-success success-icon"></i>
+                <h3 class="mt-3">Pesanan berhasil dibuat!</h3>
+                <p>Pesanan berhasil disimpan dalam riwayat belanja.</p>
+
+                <section class="success-detail">
+                    <p>No. pesanan <strong id="successOrder"></strong></p>
+                    <p>Metode bayar <strong id="successMethod"></strong></p>
+                    <p>Total <strong id="successTotal"></strong></p>
+                    <p>Pengiriman <strong id="successDate"></strong></p>
+                </section>
+
+                <a href="pesanan.html" class="btn btn-danger rounded-pill w-100 mb-2">Lihat riwayat belanja</a>
+                <a href="katalog.html" class="btn btn-outline-dark rounded-pill w-100 mb-2">Belanja lagi</a>
+                <a href="index.html" class="btn btn-light rounded-pill w-100">Ke beranda</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

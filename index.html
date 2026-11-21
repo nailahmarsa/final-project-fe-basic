@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - DapurTani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="img/DapurTani_logo_transparan.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li><a class="nav-link" href="katalog.html">Katalog</a></li>
+                    <li><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-dark rounded-pill">Login</a>
+                    <a href="registrasi.html" class="btn btn-dark rounded-pill">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="container py-5 hero">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge text-bg-success rounded-pill mb-3">Marketplace agritech untuk UMKM kuliner</span>
+                    <h1>Dari ladang petani, langsung ke <span class="text-danger">dapur usahamu.</span></h1>
+                    <p>Pesan sayur dan hasil tani segar secara terjadwal. Harga dan stok terlihat jelas, kapasitas dikonfirmasi petani sebelum panen.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="katalog.html" class="btn btn-danger rounded-pill">Lihat katalog</a>
+                        <a href="#cara-kerja" class="btn btn-outline-dark rounded-pill">Pelajari cara kerja</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual bg-dark rounded-4 p-4">
+                        <img src="img/petani2.jpg" alt="Petani2">
+                        <div class="order-info bg-white rounded-3 p-3">
+                            <small>Pesanan mingguan</small>
+                            <h6 class="fw-bold mb-0">Dikonfirmasi petani</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informasi -->
+        <section class="info-strip bg-dark text-white py-3">
+            <div class="container d-flex flex-wrap justify-content-between gap-3">
+                <span>Pesanan terjadwal</span>
+                <span>Konfirmasi kapasitas petani</span>
+                <span>Harga dan stok transparan</span>
+                <span>Dikirim lewat mitra logistik</span>
+            </div>
+        </section>
+
+        <!-- Keunggulan -->
+        <section class="container py-5 keunggulan">
+            <p class="text-danger fw-bold mb-2">KENAPA DAPURTANI ?</p>
+            <h2 class="mb-4">Pasokan jelas untuk dapur,<br>pembeli pasti untuk petani.</h2>
+            <div class="row g-3">
+                <div class="col-lg-5">
+                    <div class="card bg-success text-white border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+                        <i class="bi bi-flower2 fs-1"></i>
+                        <div>
+                            <h4>Langsung dari petani</h4>
+                            <p class="mb-0">Tanpa rantai panjang pengepul. Petani mitra memasukkan produk, harga, dan stok sendiri.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card bg-warning border-0 rounded-4 p-4 h-100">
+                                <h4>Harga dan stok transparan</h4>
+                                <p class="mb-0">Semua tampil di satu tempat sebelum kamu memesan.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-light border-0 rounded-4 p-4 h-100">
+                                <h4>Info produk dalam satu tempat</h4>
+                                <p class="mb-0">Bandingkan jenis, harga, dan estimasi panen tanpa keliling.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card bg-danger text-white border-0 rounded-4 p-4">
+                                <h4>Pesanan terjadwal mingguan</h4>
+                                <p class="mb-0">Atur kebutuhan rutin sekali, petani konfirmasi kapasitas, kamu tinggal menerima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cara Kerja -->
+        <section id="cara-kerja" class="bg-light py-5">
+            <div class="container">
+                <p class="text-danger fw-bold mb-2">CARA KERJA</p>
+                <h2 class="mb-4">Empat langkah dari stok<br>sampai meja dapur.</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                    <div class="col">
+                        <div class="card border-0 rounded-4 p-4 h-100">
+                            <div class="display-4 text-warning fw-bold">01</div>
+                            <h5>Petani input stok</h5>
+                            <p class="mb-0">Produk, harga, jumlah, dan estimasi panen dicatat di platform.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 rounded-4 p-4 h-100">
+                            <div class="display-4 text-warning fw-bold">02</div>
+                            <h5>UMKM pilih produk</h5>
+                            <p class="mb-0">Cari di katalog, tentukan jumlah, atau jadwalkan pesanan rutin.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 rounded-4 p-4 h-100">
+                            <div class="display-4 text-warning fw-bold">03</div>
+                            <h5>Petani konfirmasi</h5>
+                            <p class="mb-0">Kapasitas panen dikonfirmasi sebelum pesanan diproses.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 rounded-4 p-4 h-100">
+                            <div class="display-4 text-warning fw-bold">04</div>
+                            <h5>Kirim dan selesai</h5>
+                            <p class="mb-0">Produk dikirim, diterima, lalu transaksi tercatat otomatis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produk Unggulan -->
+<section id="produk" class="container py-5">
+    <p class="text-danger fw-bold mb-2">PRODUK UNGGULAN</p>
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <h2>Segar dari petani mitra.</h2>
+        <a href="katalog.html" class="btn btn-dark rounded-pill">Lihat semua produk</a>
+    </div>
+    <div class="row row-cols-2 row-cols-lg-4 g-3">
+        <div class="col">
+            <div class="card rounded-4 p-3 h-100">
+                <div class="rounded-3">
+                    <span class="badge text-bg-light">Ready</span>
+                    <img src="img/cabe_rawit.jpg" alt="cabai rawit">
+                </div>
+                <h5 class="mt-3 mb-1">Cabai rawit</h5>
+                <small class="text-secondary">Pak Budi</small>
+                <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
+                    <strong>Rp45rb/kg</strong>
+                    <a href="katalog.html" class="btn btn-danger btn-sm rounded-pill">Tambah</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-4 p-3 h-100">
+                <div class="card rounded-3">
+                    <span class="badge text-bg-light">Panen 3 hari</span>
+                    <img src="img/tomat.webp" alt="tomat">
+                </div>
+                <h5 class="mt-3 mb-1">Tomat</h5>
+                <small class="text-secondary">Bu Sari</small>
+                <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
+                    <strong>Rp12rb/kg</strong>
+                    <a href="katalog.html" class="btn btn-danger btn-sm rounded-pill">Tambah</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-4 p-3 h-100">
+                <div class="rounded-3">
+                    <span class="badge text-bg-light">Ready</span>
+                    <img src="img/kangkung.jpg" alt="kangkung">
+                </div>
+                <h5 class="mt-3 mb-1">Kangkung</h5>
+                <small class="text-secondary">Pak Joko</small>
+                <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
+                    <strong>Rp6rb/kg</strong>
+                    <a href="katalog.html" class="btn btn-danger btn-sm rounded-pill">Tambah</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-4 p-3 h-100">
+                <div class="rounded-3">
+                    <span class="badge text-bg-light">Ready</span>
+                    <img src="img/terong.jpg" alt="terong">
+                </div>
+                <h5 class="mt-3 mb-1">Terong ungu</h5>
+                <small class="text-secondary">Bu Ani</small>
+                <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
+                    <strong>Rp10rb/kg</strong>
+                    <a href="katalog.html" class="btn btn-danger btn-sm rounded-pill">Tambah</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Tentang Kami -->
+        <section id="tentang" class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="img/petani.jpg" alt="Petani">
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-danger fw-bold mb-2">TENTANG KAMI</p>
+                    <h2 class="mb-4">Menghubungkan yang menanam dengan yang memasak.</h2>
+                    <ul class="list-unstyled d-grid gap-3">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Petani mendapat saluran pemasaran tambahan dan kepastian pembeli.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> UMKM kuliner mendapat bahan baku rutin dengan harga dan stok yang jelas.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Pendapatan platform hanya dari komisi transaksi yang berhasil.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="container py-5">
+            <div class="cta bg-dark text-white rounded-4 p-5">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>Siap pasok dapurmu dengan hasil tani lokal?</h2>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="katalog.html" class="btn btn-danger rounded-pill">Mulai belanja</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="container py-4">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5><i class="bi bi-leaf-fill text-success"></i> DapurTani</h5>
+                <p>Platform digital yang menghubungkan petani dengan UMKM kuliner.</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Navigasi</h6>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Kontak</h6>
+                <ul class="list-unstyled">
+                    <li><a href="https://wa.me/628872576371">WhatsApp</a></li>
+                    <li><a href="mailto:nailahmarsaatmojo@gmail.com">Email</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6>Sosial Media</h6>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.instagram.com/marssa.a">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@usernamekamu">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="small">&copy; 2026 DapurTani. Final Project Frontend Basic.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
